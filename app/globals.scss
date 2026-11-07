@@ -1,0 +1,12 @@
+@use "@/shared/styles/variables.scss" as *;
+
+* {
+  font-family: $font-family-pretendard;
+  font-size: 40px;
+  color: $color-text-primary;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
