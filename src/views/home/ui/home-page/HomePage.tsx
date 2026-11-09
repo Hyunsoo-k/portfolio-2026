@@ -1,4 +1,4 @@
-import { HomePageHeroSection } from '../hero-section/HomePageHeroSection';
+import { HomePageHeroSection } from '../home-page-hero-section/HomePageHeroSection';
 
 import styles from "./HomePage.module.scss";
 
