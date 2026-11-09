@@ -1,12 +1,41 @@
 @use "@/shared/styles/variables.scss" as *;
 
 * {
-  font-family: $font-family-pretendard;
-  font-size: 40px;
-  color: $color-text-primary;
+  box-sizing: border-box;
 }
 
 body {
+  position: relative;
+
   min-height: 100vh;
+  margin: 0;
+
+  font-family: $font-family-pretendard;
+  color: $color-text-primary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  
+  border: none;
+  background-color: inherit;
+
+  font-size: inherit;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
