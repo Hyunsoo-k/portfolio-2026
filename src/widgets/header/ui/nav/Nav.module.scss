@@ -1,0 +1,54 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.nav {
+  display: none;
+
+  @include media("tablet") {
+    display: block;
+  }
+
+  .menu_list {
+    display: flex;
+    gap: 2rem;
+
+    .menu_item {
+
+      .link {
+        position: relative;
+
+        &[data-active="true"] {
+          color: $color-text-active;
+
+          &::after {
+            width: 100%;
+
+            background-color: $color-bg-active;
+          }
+        }
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+
+          width: 0;
+          height: 1px;
+
+          background-color: $color-text-inverse;
+
+          transition: width 0.2s ease-in-out;
+        }
+
+        &:hover {
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
