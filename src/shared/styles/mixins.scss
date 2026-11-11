@@ -25,3 +25,68 @@
     }
   }
 }
+
+@mixin container($size) {
+  margin-inline: auto;
+
+  @if $size == "xs" {
+    width: $container-width-xs;
+  }
+  
+  @if $size == "sm" {
+    width: $container-width-sm;
+  }
+
+  @if $size == "md" {
+    width: $container-width-md;
+  }
+
+  @else if $size == "lg" {
+    width: $container-width-lg;
+  }
+
+  @else if $size == "xl" {
+    width: $container-width-xl;
+  }
+}
+
+@mixin hero-title-container {
+  @include container("xl");
+
+  @include media("tablet") {
+    @include container("md");
+  }
+
+  @include media("desktop") {
+    max-width: 768px;
+  }
+}
+
+@mixin hero-title-typography {
+  font-family: $font-family-jakarta;
+  font-size: $size-font-3xl;
+  font-weight: 300;
+
+  @include media("tablet") {
+    font-size: $size-font-3xl;
+  }
+
+  @include media("desktop") {
+    font-size: $size-font-5xl;
+  }
+
+  @include media("wide") {
+    font-size: $size-font-6xl;
+  }
+}
+
+@mixin hero-sub-title-typography {
+  font-family: $font-family-pretendard;
+  font-size: $size-font-xs;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+
+  @include media("desktop") {
+    font-size: $size-font-sm;
+  }
+}

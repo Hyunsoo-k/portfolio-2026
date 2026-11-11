@@ -1,9 +1,7 @@
-$max-width: 1440px;
-
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-$breakpoint-wide: 1280px;
+$breakpoint-wide: 2560px;
 
 $color-border-primary: #0f0f0f;
 $color-border-secondary: #23382c;
@@ -14,20 +12,29 @@ $color-bg-dark: #0f0f0f;
 $color-bg-dark-secondary: #292929;
 $color-bg-active: #e49366;
 
-$font-family-serif: var(--fraunces);
+$font-family-fraunces: var(--fraunces);
+$font-family-jakarta: var(--jakarta);
 $font-family-pretendard: var(--pretendard);
 
-$size-font-xs: 0.3rem;
-$size-font-sm: 0.5rem;
+$size-font-2xs: 0.625rem;
+$size-font-xs: 0.75rem;
+$size-font-sm: 0.875rem;
 $size-font-md: 1rem;
-$size-font-lg: 1.5rem;
-$size-font-xl: 2rem;
+$size-font-lg: 1.25rem;
+$size-font-xl: 1.5rem;
+$size-font-2xl: 2rem;
+$size-font-3xl: 3rem;
+$size-font-4xl: 4rem;
+$size-font-5xl: 5rem;
+$size-font-6xl: 6rem;
 
 $color-text-primary: #0f0f0f;
 $color-text-secondary: #23382c;
 $color-text-inverse: #ffffff;
 $color-text-active: #e49366;
 
+$container-width-xs: 40%;
+$container-width-sm: 60%;
 $container-width-md: 70%;
 $container-width-lg: 80%;
 $container-width-xl: 90%;

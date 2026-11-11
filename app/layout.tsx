@@ -13,12 +13,18 @@ const pretendard = localFont({
   variable: "--pretendard",
 });
 
+const jakarta = localFont({
+  src: "../src/shared/assets/fonts/JakartaSansVariable.ttf",
+  display: "swap",
+  variable: "--jakarta",
+});
+
 const fraunces = Fraunces({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--fraunces",
   display: "swap",
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className={`${pretendard.variable} ${fraunces.variable}`}>
+    <html lang="ko" className={`${pretendard.variable} ${jakarta.variable} ${fraunces.variable}`}>
       <body>
         <SmoothScrollProvider>
           <Header />
