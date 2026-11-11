@@ -6,13 +6,13 @@ export const HomePageHeroSection = () => {
       <div className={styles.title_container}>
         <h1 className={styles.title}>
           <span className={styles.title_line}>
-            <span className={styles.title_line_span}>fullstack developer</span>
-            digital
+            <span className={styles.title_line_span}>i always make delights</span>
+            building
           </span>
-          <span className={styles.title_line}>solution</span>
+          <span className={styles.title_line}>digital</span>
           <span className={styles.title_line}>
-            builder.
-            <span className={styles.title_line_span}>making delights</span>
+            solution.
+            <span className={styles.title_line_span}>in digital area</span>
           </span>
         </h1>
       </div>

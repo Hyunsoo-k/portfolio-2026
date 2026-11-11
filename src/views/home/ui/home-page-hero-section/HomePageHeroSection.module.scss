@@ -2,7 +2,9 @@
 @use "@/shared/styles/mixins.scss" as *;
 
 .home_page_hero_section {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   height: 36rem;
   
@@ -14,24 +16,23 @@
 
   @include media("wide") {
     height: 95vh;
-    max-height: 68rem;
   }
 
   .title_container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: max(50%, 13rem);
-
-    transform: translate(-50%, -50%);
+    @include hero-title-container;
     
     .title {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
 
       color: $color-text-inverse;
+      line-height: 1;
+
+      @include media("tablet") {
+        gap: 2rem;
+      }
 
       .title_line {
         display: flex;
@@ -39,14 +40,10 @@
         align-items: center;
         gap: 1rem;
 
-        font-family: $font-family-serif;
-        font-size: 3.5rem;
-        font-weight: 300;
+        @include hero-title-typography;
 
         @include media("tablet") {
           flex-direction: row;
-
-          font-size: 4rem;
 
           &:nth-child(1) {
             align-self: start;
@@ -69,16 +66,9 @@
           }
         }
 
-        @include media("desktop") {
-          font-size: 7rem;
-          font-weight: 300;
-        }
-
         .title_line_span {
-          font-family: $font-family-pretendard;
-          font-size: 0.9rem;
-          text-decoration: underline;
-          text-underline-offset: 0.3rem;
+
+          @include hero-sub-title-typography;
         }
       }
     }
