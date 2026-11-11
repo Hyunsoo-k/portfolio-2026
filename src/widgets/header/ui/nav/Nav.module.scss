@@ -17,6 +17,8 @@
       .link {
         position: relative;
 
+        font-size: $size-font-sm;
+
         &[data-active="true"] {
           color: $color-text-active;
 

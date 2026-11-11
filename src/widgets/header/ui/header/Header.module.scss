@@ -20,15 +20,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: $container-width-xl;
-    max-width: $max-width;
-    margin: 0 auto;
+    
+    @include container("xl");
 
     .brand_link {
       position: relative;
       z-index: 1;
 
-      font-size: $size-font-lg;
+      font-size: $size-font-md;
     }
   }
 }
