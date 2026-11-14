@@ -1,0 +1,15 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.underline_link {
+  font-family: $font-family-serif;
+  font-size: $font-size-xl;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.5rem;
+
+  @include media("desktop") {
+    font-size: $font-size-4xl;
+  }
+}

@@ -1,0 +1,22 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.home_page_project_section {
+  padding: 5rem 0;
+
+  @include media("desktop") {
+    padding: 5rem 0 8rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 5rem;
+    
+    @include media("desktop") {
+      padding-top: 8rem;
+    }
+  }
+}

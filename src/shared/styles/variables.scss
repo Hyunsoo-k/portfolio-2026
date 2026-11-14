@@ -1,9 +1,7 @@
-$max-width: 1440px;
-
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-$breakpoint-wide: 1280px;
+$breakpoint-wide: 2560px;
 
 $color-border-primary: #0f0f0f;
 $color-border-secondary: #23382c;
@@ -14,20 +12,28 @@ $color-bg-dark: #0f0f0f;
 $color-bg-dark-secondary: #292929;
 $color-bg-active: #e49366;
 
-$font-family-serif: var(--fraunces);
 $font-family-pretendard: var(--pretendard);
+$font-family-serif: var(--cabinet-grotesk);
 
-$size-font-xs: 0.3rem;
-$size-font-sm: 0.5rem;
-$size-font-md: 1rem;
-$size-font-lg: 1.5rem;
-$size-font-xl: 2rem;
+$font-size-2xs: 0.625rem;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.5rem;
+$font-size-4xl: 3rem;
+$font-size-5xl: 3.5rem;
+$font-size-6xl: 4rem;
 
 $color-text-primary: #0f0f0f;
-$color-text-secondary: #23382c;
+$color-text-secondary: #7a7770;
 $color-text-inverse: #ffffff;
 $color-text-active: #e49366;
 
+$container-width-xs: 40%;
+$container-width-sm: 60%;
 $container-width-md: 70%;
 $container-width-lg: 80%;
 $container-width-xl: 90%;

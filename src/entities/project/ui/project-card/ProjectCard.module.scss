@@ -1,0 +1,80 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.project_card {
+  display: grid;
+  grid-template: repeat(3, auto) / 1fr;
+
+  @include media("desktop") {
+    grid-template: repeat(2, auto) / repeat(2, auto);
+  }
+
+  &.small_title {
+
+    .info {
+
+        .title {
+          @include media("desktop") {
+            font-size: $font-size-md;
+          }
+        }
+      }
+  }
+
+  .meta {
+    font-size: $font-size-sm;
+    font-weight: 600;
+
+    @include media("desktop") {
+      grid-area: 2 / 2 / 3 /3;
+      justify-self: end;
+      margin-top: 1.5rem;
+      padding-right: 2.5rem;
+
+      font-weight: 500;
+    }
+  }
+  
+  .thumbnail {
+    width: 100%;
+    aspect-ratio: 1 / 0.55;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+    @include media("desktop") {
+      grid-area: 1 / 1 / 2 / 3;
+      margin-top: 0;
+    }
+  }
+
+  .info {
+    margin-top: 0.5rem;
+
+    @include media("desktop") {
+      margin-top: 1.5rem;
+      padding-left: 2.5rem;
+    }
+
+    .title {
+      font-size: $font-size-xl;
+      font-weight: 400;
+
+      @include media("desktop") {
+        font-size: $font-size-2xl;
+      }
+    }
+
+    .summary {
+      display: block;
+      margin: 0.2rem 0 0;
+
+      font-size: $font-size-xs;
+      color: $color-text-secondary;
+
+      @include media("desktop") {
+        margin: 0.4rem 0 0;
+      }
+    }
+  }
+}
