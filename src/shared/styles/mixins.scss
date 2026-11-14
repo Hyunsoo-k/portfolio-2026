@@ -63,30 +63,26 @@
 }
 
 @mixin hero-title-typography {
-  font-family: $font-family-jakarta;
-  font-size: $size-font-3xl;
-  font-weight: 300;
-
-  @include media("tablet") {
-    font-size: $size-font-3xl;
-  }
+  font-family: $font-family-serif;
+  font-size: $font-size-4xl;
+  font-weight: 350;
 
   @include media("desktop") {
-    font-size: $size-font-5xl;
+    font-size: 6rem;
   }
 
   @include media("wide") {
-    font-size: $size-font-6xl;
+    font-size: 8rem;
   }
 }
 
 @mixin hero-sub-title-typography {
   font-family: $font-family-pretendard;
-  font-size: $size-font-xs;
+  font-size: $font-size-xs;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 
   @include media("desktop") {
-    font-size: $size-font-sm;
+    font-size: $font-size-sm;
   }
 }
