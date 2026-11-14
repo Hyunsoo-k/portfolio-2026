@@ -1,0 +1,28 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.project_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+
+  @include container("xl");
+
+  @include media("desktop") {
+    grid-template: auto / repeat(2, 1fr);
+    row-gap: 5rem;
+    column-gap: 15%;
+    
+    @include container("md");
+  }
+
+  .project_item {
+
+    @include media("desktop") {
+
+      &:nth-child(3n + 1) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
