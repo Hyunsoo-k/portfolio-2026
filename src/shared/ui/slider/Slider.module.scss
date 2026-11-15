@@ -1,0 +1,30 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.slider {
+  overflow: hidden;
+
+  .track {
+    overflow-x: scroll;
+
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 5%;
+
+    @include hide-scrollbar;
+
+    @include media("desktop") {
+      gap: 2rem;
+      padding: 0 10%;
+    }
+
+    .track_item {
+      flex-shrink: 0;
+      width: 40%;
+
+      @include media("desktop") {
+        width: 23%;
+      }
+    }
+  }
+}

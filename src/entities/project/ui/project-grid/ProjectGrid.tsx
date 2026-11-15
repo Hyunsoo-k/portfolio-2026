@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 
 import { PROJECTS } from '@/entities/project/constants/projects.constant';
-import { ProjectCard } from '../ProjectCard';
+import { ProjectCard } from '../project-card/ProjectCard';
 
 import styles from "./ProjectGrid.module.scss";
 

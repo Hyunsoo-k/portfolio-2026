@@ -1,13 +1,18 @@
 "use client";
+import dynamic from 'next/dynamic';
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 import { MenuButton } from '../menu-button/MenuButton';
-import { MobileMenu } from '../mobile-menu/MobileMenu';
 import { Nav } from '../nav/Nav';
 
 import styles from "./Header.module.scss";
+
+const MobileMenu = dynamic(
+  () => import('../mobile-menu/MobileMenu').then((mod) => mod.MobileMenu),
+  { ssr: false }
+);
 
 export const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null);
