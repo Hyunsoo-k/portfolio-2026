@@ -1,0 +1,58 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.post_card {
+
+  .thumbnail {
+    width: 100%;
+  }
+
+  .info {
+    margin-top: 0.5rem;
+
+    .title {
+      font-size: $font-size-lg;
+      font-weight: 400;
+      line-height: 1;
+
+      @include line-clamp(2);
+
+      @include media("desktop") {
+        margin-top: 1rem;
+
+        font-size: $font-size-xl;
+      }
+    }
+
+    .desc {
+      margin-top: 0.5rem;
+      
+      font-size: $font-size-xs;
+      font-weight: 350;
+      color: $color-text-secondary;
+
+      @include line-clamp(2);
+
+      @include media("desktop") {
+        margin-top: 0.75rem;
+
+        font-size: $font-size-sm;
+      }
+
+    }
+  }
+
+  .category {
+    display: block;
+    margin-top: 1rem;
+
+    font-size: $font-size-xs;
+    font-weight: 500;
+
+    @include media("desktop") {
+      margin-top: 1rem;
+      
+      font-size: $font-size-sm;
+    }
+  }
+}
