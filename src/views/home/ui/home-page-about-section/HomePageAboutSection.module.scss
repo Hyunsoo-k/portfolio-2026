@@ -1,0 +1,125 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.home_page_about_section {
+  padding: 5rem 0;
+
+  background-color: $color-bg-dark;
+
+  color: $color-text-inverse;
+
+  @include media("desktop") {
+    padding: 8rem 0;
+  }
+
+  .fig_container {
+    display: flex;
+    justify-content: space-between;
+
+    .figure {
+      width: 45%;
+
+      .img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .caption {
+        margin-top: 1rem;
+
+        font-size: $font-size-xs;
+
+        @include media("desktop") {
+          margin-top: 1.5rem;
+
+          font-size: $font-size-sm;
+        }
+      }
+
+      &:nth-child(1) {
+
+        .caption {
+          margin-left: 1.5em;
+
+          @include media("desktop") {
+            margin-left: 5rem;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        
+        .caption {
+          margin-right: 1.5rem;
+
+          text-align: end;
+
+          @include media("desktop") {
+            margin-right: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .text_container {
+    margin: 6rem auto 0;
+
+    text-align: center;
+
+    @include container("xl");
+    
+    @include media("desktop") {
+
+    }
+
+    .title {
+      font-family: $font-family-serif;
+      font-size: $font-size-xl;
+      font-weight: 350;
+
+      @include media("desktop") {
+        font-size: $font-size-4xl;
+      }
+    }
+
+    .desc {
+      margin: 2rem auto 0;
+
+      font-size: $font-size-xs;
+      font-weight: 300;
+      line-height: 1.8;
+
+      @include media("desktop") {
+        width: 30rem;
+
+        font-size: $font-size-sm;
+        line-height: 1.5;
+      }
+
+      &::after {
+        content: "";
+
+        display: block;
+        width: 2rem;
+        height: 1px;
+        margin: 3rem auto 0;
+
+        background-color: $color-bg-primary;
+
+        @include media("desktop") {
+          width: 3rem;
+        }
+      }
+    }
+  }
+
+  .link_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 3rem auto 0;
+  }
+}
