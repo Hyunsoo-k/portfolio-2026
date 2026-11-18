@@ -1,5 +1,6 @@
 import { HomePageHeroSection } from '../home-page-hero-section/HomePageHeroSection';
 import { HomePageProjectSection } from '../home-page-project-section/HomePageProjectSection';
+import { HomePageAboutSection } from '../home-page-about-section/HomePageAboutSection';
 import { HomePagePostSection } from '../home-page-post-section/HomePagePostSection';
 
 import styles from "./HomePage.module.scss";
@@ -9,7 +10,7 @@ export const HomePage = () => {
     <main className={styles.home_page}>
       <HomePageHeroSection />
       <HomePageProjectSection />
-      <section data-theme="dark" className={styles.dummy}></section>
+      <HomePageAboutSection />
       <HomePagePostSection />
     </main>
   );
