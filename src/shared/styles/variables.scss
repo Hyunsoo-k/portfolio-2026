@@ -4,12 +4,12 @@ $breakpoint-desktop: 1024px;
 $breakpoint-wide: 2560px;
 
 $color-border-primary: #0f0f0f;
-$color-border-secondary: #23382c;
+$color-border-muted: #23382c;
 
 $color-bg-primary: #ffffff;
-$color-bg-secondary: #f0f0f0;
+$color-bg-muted: #f0f0f0;
 $color-bg-dark: #0f0f0f;
-$color-bg-dark-secondary: #292929;
+$color-bg-dark-muted: #292929;
 $color-bg-active: #e49366;
 
 $font-family-pretendard: var(--pretendard);
@@ -28,7 +28,7 @@ $font-size-5xl: 3.5rem;
 $font-size-6xl: 4rem;
 
 $color-text-primary: #0f0f0f;
-$color-text-secondary: #7a7770;
+$color-text-muted: #7a7770;
 $color-text-inverse: #ffffff;
 $color-text-active: #e49366;
 
