@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import { SmoothScrollProvider } from '@/app/providers/smooth-scroll-provider';
 import { Header } from '@/widgets/header/ui/header/Header';
+import { Footer } from '@/widgets/footer/ui/footer/Footer';
 
 import "./globals.scss";
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SmoothScrollProvider>
           <Header />
           {children}
+          <Footer />
         </SmoothScrollProvider>
       </body>
     </html>
