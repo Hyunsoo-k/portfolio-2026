@@ -1,0 +1,9 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.local_clock {
+  display: block;
+
+  font-size: $font-size-sm;
+  font-weight: 500;
+}

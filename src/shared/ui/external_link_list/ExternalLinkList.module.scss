@@ -1,0 +1,7 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.external_link_list {
+  display: flex;
+  gap: 0.5rem;
+}

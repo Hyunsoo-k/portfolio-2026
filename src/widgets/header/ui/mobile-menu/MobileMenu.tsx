@@ -10,6 +10,7 @@ import { HiArrowUpLeft } from "react-icons/hi2";
 import { MENU_LINKS } from '@/shared/constants/menu-links';
 import { PROFILE_INFOS } from '@/shared/constants/profile-infos';
 import { EXTERNAL_LINKS } from '@/shared/constants/external-links';
+import { LocalClock } from '@/shared/ui/local-clock/LocalClock';
 
 import styles from "./MobileMenu.module.scss";
 
@@ -20,8 +21,6 @@ type Props = {
 
 export const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
   const pathname = usePathname();
-
-  const [timeString, setTimeString] = useState<string>("");
 
   useEffect(() => {
     if (!isOpen) {
@@ -36,26 +35,6 @@ export const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
       document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    const updateKstTime = () => {
-      const now = new Date();
-      const kstTime = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'Asia/Seoul',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-      }).format(now);
-
-      setTimeString(kstTime);
-    };
-
-    updateKstTime();
-    const timer = setInterval(updateKstTime, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -113,7 +92,7 @@ export const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
         </Link>
       </div>
       <footer className={styles.footer}>
-        <span className={styles.clock}>KST {timeString}</span>
+        <LocalClock />
       </footer>
     </div>,
     document.body
