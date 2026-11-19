@@ -1,0 +1,28 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.home_page_contact_section {
+  position: relative;
+
+  .img_background {
+    height: 20rem;
+
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include media("desktop") {
+      height: 30rem;
+    }
+  }
+
+  .dark_background {
+    height: 22rem;
+
+    background-color: $color-bg-dark;
+
+    @include media("desktop") {
+      height: 42rem;
+    }
+  }
+}
