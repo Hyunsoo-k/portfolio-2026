@@ -2,11 +2,7 @@
 @use "@/shared/styles/mixins.scss" as *;
 
 .home_page_project_section {
-  padding: 5rem 0;
-
-  @include media("desktop") {
-    padding: 5rem 0 8rem;
-  }
+  @include section-padding-block-asymmetric;
 
   .footer {
     display: flex;
@@ -16,7 +12,7 @@
     padding-top: 5rem;
     
     @include media("desktop") {
-      padding-top: 8rem;
+      padding-top: 5rem;
     }
   }
 }
