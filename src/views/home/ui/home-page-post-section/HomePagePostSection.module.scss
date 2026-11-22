@@ -2,17 +2,12 @@
 @use "@/shared/styles/mixins.scss" as *;
 
 .home_page_post_section {
-  padding: 5rem 0;
-
-  @include media("desktop") {
-    padding: 8rem 0;
-  }
+  @include section-padding-block;
 
   .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding-top: 5rem;
     
     @include media("desktop") {
