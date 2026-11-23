@@ -110,7 +110,8 @@
   font-size: $font-size-xs;
   font-weight: 350;
   text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  text-underline-offset: 0.25rem;
+  line-height: 1.7;
 }
 
 @mixin line-clamp($lines) {
