@@ -11,8 +11,8 @@ export const HomePage = () => {
     <main className={styles.home_page}>
       <HomePageHeroSection />
       <HomePageProjectSection />
-      <HomePageAboutSection />
       <HomePagePostSection />
+      <HomePageAboutSection />
       <HomePageContactSection />
     </main>
   );

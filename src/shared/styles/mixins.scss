@@ -50,6 +50,22 @@
   }
 }
 
+@mixin section-padding-block {
+  padding-block: 5rem;
+
+  @include media("desktop") {
+    padding-block: 8rem;
+  }
+}
+
+@mixin section-padding-block-asymmetric {
+  padding-block: 5rem;
+
+  @include media("desktop") {
+    padding-block: 0 8rem;
+  }
+}
+
 @mixin hero-title-container {
   @include container("xl");
 
@@ -58,33 +74,44 @@
   }
 
   @include media("desktop") {
-    max-width: 768px;
+    max-width: 960px;
   }
 }
 
 @mixin hero-title-typography {
   font-family: $font-family-serif;
-  font-size: $font-size-4xl;
+  font-size: $font-size-5xl;
   font-weight: 350;
 
   @include media("desktop") {
-    font-size: 6rem;
+    font-size: 4.5rem;
   }
 
   @include media("wide") {
-    font-size: 8rem;
+    font-size: 7.5rem;
   }
 }
 
-@mixin hero-sub-title-typography {
-  font-family: $font-family-pretendard;
-  font-size: $font-size-xs;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+@mixin sub-page-hero-title-container {
+  @include container("xl");
+
+  @include media("tablet") {
+    @include container("md");
+  }
 
   @include media("desktop") {
-    font-size: $font-size-sm;
+    max-width: 1300px;
   }
+}
+
+
+@mixin hero-eyebrow-typography {
+  font-family: $font-family-pretendard;
+  font-size: $font-size-xs;
+  font-weight: 350;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  line-height: 1.7;
 }
 
 @mixin line-clamp($lines) {

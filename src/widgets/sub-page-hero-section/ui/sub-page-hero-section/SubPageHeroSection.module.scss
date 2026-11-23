@@ -1,0 +1,70 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.sub_page_hero_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+
+  &[data-theme="dark"] {
+    background-color: $color-bg-dark;
+
+    color: $color-text-inverse;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+
+    @include sub-page-hero-title-container;
+
+    .title_line {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      @include hero-title-typography;
+
+      @include media("desktop") {
+        
+      }
+
+      .title_span {
+        flex-shrink: 0;
+      }
+
+      &:nth-child(1) {
+        
+        .eyebrow {
+          order: -1;
+
+          @include media("desktop") {
+            order: 0;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        
+        @include media("desktop") {
+          align-self: end;
+        }
+
+        .eyebrow {
+
+          @include media("desktop") {
+            order: -1;
+          }
+        }
+      }
+
+      .eyebrow {
+        
+        font-family: $font-family-pretendard;
+
+        @include hero-eyebrow-typography;
+      }
+    }
+  }
+}

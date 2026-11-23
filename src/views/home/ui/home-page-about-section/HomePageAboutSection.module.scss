@@ -2,27 +2,86 @@
 @use "@/shared/styles/mixins.scss" as *;
 
 .home_page_about_section {
-  padding: 5rem 0;
+  padding-top: 5rem;
 
   background-color: $color-bg-dark;
 
   color: $color-text-inverse;
 
   @include media("desktop") {
-    padding: 8rem 0;
+    padding-top: 8rem;
   }
 
-  .fig_container {
+  .text_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-inline: auto;
+    
+    text-align: center;
+
+    @include media("desktop") {
+      gap: 5rem;
+    }
+
+    &::after {
+      content: "";
+
+      width: 3rem;
+      height: 1px;
+      margin-inline: auto;
+
+      background-color: $color-bg-primary;
+
+      @include media("desktop") {
+        width: 5rem;
+      }
+    }
+
+    .title {
+      width: 80%;
+
+      font-family: $font-family-serif;
+      font-size: $font-size-2xl;
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.5rem;
+
+      @include media("desktop") {
+        font-size: $font-size-6xl;
+      }
+    }
+    
+    .desc {
+      width: 80%;
+
+      font-size: $font-size-sm;
+      line-height: 1.5;
+
+      @include media("desktop") {
+        width: 25rem;
+      }
+    }
+  }
+
+  .figure_container {
     display: flex;
     justify-content: space-between;
+    margin-top: 3rem;
+
+    @include media("desktop") {
+      margin-top: 5rem;
+    }
 
     .figure {
-      width: 45%;
+      width: 40%;
 
       .img {
-        display: block;
-        object-fit: cover;
         width: 100%;
+        aspect-ratio: 1 / 0.75;
+        object-fit: cover;
       }
 
       .caption {
@@ -31,8 +90,6 @@
         font-size: $font-size-xs;
 
         @include media("desktop") {
-          margin-top: 1.5rem;
-
           font-size: $font-size-sm;
         }
       }
@@ -40,7 +97,7 @@
       &:nth-child(1) {
 
         .caption {
-          margin-left: 1.5em;
+          margin-left: 1rem;
 
           @include media("desktop") {
             margin-left: 5rem;
@@ -49,77 +106,39 @@
       }
 
       &:nth-child(2) {
-        
+
         .caption {
-          margin-right: 1.5rem;
+          margin-right: 1rem;
 
           text-align: end;
 
           @include media("desktop") {
-            margin-right: 5rem;
+            margin-left: 5rem;
           }
         }
       }
     }
   }
 
-  .text_container {
-    margin: 6rem auto 0;
-
-    text-align: center;
-
-    @include container("xl");
-    
-    @include media("desktop") {
-
-    }
-
-    .title {
-      font-family: $font-family-serif;
-      font-size: $font-size-xl;
-      font-weight: 350;
-
-      @include media("desktop") {
-        font-size: $font-size-4xl;
-      }
-    }
-
-    .desc {
-      margin: 2rem auto 0;
-
-      font-size: $font-size-xs;
-      font-weight: 300;
-      line-height: 1.8;
-
-      @include media("desktop") {
-        width: 30rem;
-
-        font-size: $font-size-sm;
-        line-height: 1.5;
-      }
-
-      &::after {
-        content: "";
-
-        display: block;
-        width: 2rem;
-        height: 1px;
-        margin: 3rem auto 0;
-
-        background-color: $color-bg-primary;
-
-        @include media("desktop") {
-          width: 3rem;
-        }
-      }
-    }
-  }
-
   .link_wrapper {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 3rem auto 0;
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 2rem;
+
+    background-color: $color-bg-primary;
+
+    color: $color-text-primary;
+  
+    transform: translateY(50%);
+
+    @include media("desktop") {
+      width: 50%;
+    }
   }
 }
