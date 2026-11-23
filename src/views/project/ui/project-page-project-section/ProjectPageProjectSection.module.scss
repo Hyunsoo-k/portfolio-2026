@@ -1,0 +1,10 @@
+@use "@/shared/styles/variables.scss" as *;
+@use "@/shared/styles/mixins.scss" as *;
+
+.project_page_project_section {
+  padding-block: 5rem;
+
+  @include media("desktop") {
+    padding-block: 0 8rem;
+  }
+}
