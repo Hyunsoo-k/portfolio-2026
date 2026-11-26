@@ -1,11 +1,11 @@
 import { ProjectGrid } from '@/entities/project/ui/project-grid/ProjectGrid';
 import { UnderlineLink } from '@/shared/ui/underline-link/UnderlineLink';
 
-import styles from "./HomePageProjectSection.module.scss";
+import styles from "./ProjectSection.module.scss";
 
-export const HomePageProjectSection = () => {
+export const ProjectSection = () => {
   return (
-    <section data-theme="light" className={styles.home_page_project_section}>
+    <section data-theme="light" className={styles.project_section}>
       <ProjectGrid />
       <footer className={styles.footer}>
         <UnderlineLink url="/project" text="View all projects" />

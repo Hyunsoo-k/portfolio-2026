@@ -1,7 +1,7 @@
 @use "@/shared/styles/variables.scss" as *;
 @use "@/shared/styles/mixins.scss" as *;
 
-.home_page_post_section {
+.post_section {
   @include section-padding-block;
 
   .footer {

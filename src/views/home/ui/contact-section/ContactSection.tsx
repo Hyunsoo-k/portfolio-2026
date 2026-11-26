@@ -1,18 +1,18 @@
-import { HomePageContactCard } from '../home-page-contact-card/HomePageContactCard';
+import { ContactCard } from '../contact-card/ContactCard';
 
 import wallpaperImg from "../../assets/wallpaper.png";
 
-import styles from "./HomePageContactSection.module.scss";
+import styles from "./ContactSection.module.scss";
 
-export const HomePageContactSection = () => {
+export const ContactSection = () => {
   return (
-    <section className={styles.home_page_contact_section}>
+    <section className={styles.contact_section}>
       <div
         className={styles.img_background}
         style={{ backgroundImage: `url(${wallpaperImg.src})` }}
       />
       <div data-theme="dark" className={styles.dark_background} />
-      <HomePageContactCard />
+      <ContactCard />
     </section>
   );
 };
