@@ -1,7 +1,7 @@
 @use "@/shared/styles/variables.scss" as *;
 @use "@/shared/styles/mixins.scss" as *;
 
-.home_page_project_section {
+.project_section {
   @include section-padding-block-asymmetric;
 
   .footer {

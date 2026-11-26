@@ -1,19 +1,19 @@
-import { HomePageHeroSection } from '../home-page-hero-section/HomePageHeroSection';
-import { HomePageProjectSection } from '../home-page-project-section/HomePageProjectSection';
-import { HomePageAboutSection } from '../home-page-about-section/HomePageAboutSection';
-import { HomePagePostSection } from '../home-page-post-section/HomePagePostSection'
-import { HomePageContactSection } from '../home-page-contact-section/HomePageContactSection';
+import { HeroSection } from '../hero-section/HeroSection';
+import { ProjectSection } from '../project-section/ProjectSection';
+import { AboutSection } from '../about-section/AboutSection';
+import { PostSection } from '../post-section/PostSection'
+import { ContactSection } from '../contact-section/ContactSection';
 
 import styles from "./HomePage.module.scss";
 
 export const HomePage = () => {
   return (
     <main className={styles.home_page}>
-      <HomePageHeroSection />
-      <HomePageProjectSection />
-      <HomePagePostSection />
-      <HomePageAboutSection />
-      <HomePageContactSection />
+      <HeroSection />
+      <ProjectSection />
+      <PostSection />
+      <AboutSection />
+      <ContactSection />
     </main>
   );
 };

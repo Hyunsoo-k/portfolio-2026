@@ -1,8 +1,8 @@
-import styles from "./HomePageHeroSection.module.scss";
+import styles from "./HeroSection.module.scss";
 
-export const HomePageHeroSection = () => {
+export const HeroSection = () => {
   return (
-    <section data-theme="dark" className={styles.home_page_hero_section}>
+    <section data-theme="dark" className={styles.hero_section}>
       <div className={styles.title_container}>
         <h1 className={styles.title}>
           <span className={styles.span}>

@@ -92,18 +92,6 @@
   }
 }
 
-@mixin sub-page-hero-title-container {
-  @include container("xl");
-
-  @include media("tablet") {
-    @include container("md");
-  }
-
-  @include media("desktop") {
-    max-width: 1300px;
-  }
-}
-
 
 @mixin hero-eyebrow-typography {
   font-family: $font-family-pretendard;

@@ -4,11 +4,11 @@ import { UnderlineLink } from '@/shared/ui/underline-link/UnderlineLink';
 
 import wallImg from "../../assets/wall.png";
 
-import styles from "./HomePageContactCard.module.scss";
+import styles from "./ContactCard.module.scss";
 
-export const HomePageContactCard = () => {
+export const ContactCard = () => {
   return (
-    <div className={styles.home_page_contact_card}>
+    <div className={styles.contact_card}>
       <div className={styles.text_grid}>
         <h4 className={styles.title}>
           Get in touch.

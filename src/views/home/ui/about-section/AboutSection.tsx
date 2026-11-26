@@ -7,12 +7,12 @@ import { UnderlineLink } from '@/shared/ui/underline-link/UnderlineLink';
 import serverImg from "../../assets/server.png";
 import labtopImg from "../../assets/labtop.png";
 
-import styles from "./HomePageAboutSection.module.scss";
+import styles from "./AboutSection.module.scss";
 
-export const HomePageAboutSection = () => {
+export const AboutSection = () => {
   return (
     <>
-      <section data-theme="dark" className={styles.home_page_about_section}>
+      <section data-theme="dark" className={styles.about_section}>
         <div className={styles.text_container}>
           <h2 className={styles.title}>
             Develop for a<br />
